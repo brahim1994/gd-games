@@ -1,0 +1,10 @@
+{
+  "mintegral_app_id": "YOUR_APP_ID",
+  "mintegral_app_key": "YOUR_APP_KEY",
+
+  "banner_unit_id": "YOUR_BANNER_UNIT_ID",
+  "interstitial_unit_id": "YOUR_INTERSTITIAL_UNIT_ID",
+  "rewarded_unit_id": "YOUR_REWARDED_UNIT_ID",
+
+  "home_url": "https://www.google.com"
+}
