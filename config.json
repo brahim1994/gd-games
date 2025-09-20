@@ -2,9 +2,10 @@
   "mintegral_app_id": "144002",
   "mintegral_app_key": "7c22942b749fe6a6e361b675e96b3ee9",
 
-  "banner_unit_id": "2677210",
-  "interstitial_unit_id": "462374",
-  "rewarded_unit_id": "462372",
+  "banner_unit_id": "2677203",
+  "interstitial_unit_id": "1542103",
+  "rewarded_unit_id": "1542101",
 
   "home_url": "https://brahim1994.github.io/gd-games/"
 }
+
