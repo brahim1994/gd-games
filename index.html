@@ -1,250 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>GD Games</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <style>
-    :root{
-      --bg:#0b0b0b;
-      --card-bg: linear-gradient(180deg, #161616, #0d0d0d);
-      --accent:#7b1fa2;
-      --muted:rgba(255,255,255,0.7);
-      --white:#fff;
-    }
-    *{box-sizing:border-box}
-    body {
-      margin: 0;
-      padding: 20px 12px;
-      font-family: Inter, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--white);
-      text-align: center;
-    }
-    h1 {
-      margin: 10px 0 22px;
-      font-size: 20px;
-      letter-spacing: 0.6px;
-    }
-    .game-container {
-      margin: 16px auto;
-      width: 100%;
-      max-width: 840px;
-      text-align: center;
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-      margin: 0 auto;
-    }
-    .thumb {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 8px;
-      display: block;
-      margin: 8px auto 14px;
-      background:#111;
-    }
-    .title { font-size: 18px; margin: 10px 0; font-weight:700; }
-    .note { color: var(--muted); font-weight:700; margin:8px 0 16px; }
-    .play-btn {
-      display:inline-block;
-      padding: 12px 34px;
-      background: #ffffff;
-      color:#111;
-      border-radius: 8px;
-      text-decoration:none;
-      font-weight:800;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-      margin-bottom:10px;
-    }
-
-    .controls {
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      margin-top:14px;
-      flex-wrap:wrap;
-    }
-    .ctrl {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.06);
-      color: var(--white);
-      padding:10px 14px;
-      border-radius:8px;
-      cursor:pointer;
-      min-width:110px;
-      font-weight:700;
-    }
-    .ctrl.secondary { border-color: rgba(255,255,255,0.12); }
-
-    /* iframe responsive */
-    .game-frame {
-      width: 100%;
-      height: 520px;
-      border: none;
-      background: #000;
-      margin-top: 12px;
-      border-radius:8px;
-      overflow:hidden;
-    }
-
-    /* small screens adjustments */
-    @media (max-width:520px){
-      .thumb{width:160px;height:160px}
-      .play-btn{padding:10px 22px}
-    }
-  </style>
+<meta charset="UTF-8">
+<title>GD Games</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;padding:20px;background:#0b0b0b;color:#fff;text-align:center;font-family:Arial,sans-serif;}
+.card{background:#161616;padding:20px;border-radius:10px;margin-bottom:20px;box-shadow:0 8px 20px rgba(0,0,0,0.6);}
+.thumb{width:220px;height:220px;object-fit:cover;border-radius:8px;margin:8px auto 14px;}
+.title{font-size:18px;margin:10px 0;font-weight:700;}
+.play-btn{display:inline-block;padding:12px 34px;background:#fff;color:#111;border-radius:8px;text-decoration:none;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,0.5);}
+</style>
 </head>
 <body>
-  <h1>🎮 Welcome to GD Games</h1>
+<h1>🎮 GD Games</h1>
 
-  <!-- Game 1 -->
-  <div class="game-container">
-    <div class="card">
-      <img class="thumb" src="https://raw.githubusercontent.com/brahim1994/gd-games/main/thumb1.png" alt="Game 1"/>
-      <div class="title">Game 1</div>
-      <div class="note">Best cozy puzzle</div>
+<div class="card">
+<img class="thumb" src="https://raw.githubusercontent.com/brahim1994/gd-games/main/thumb1.png"/>
+<div class="title">Game 1</div>
+<a class="play-btn" href="https://html5.gamedistribution.com/5e09090e42fc4ce598650af75ea5739e/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/" target="_blank">▶ PLAY</a>
+</div>
 
-      <a class="play-btn" href="https://html5.gamedistribution.com/5e09090e42fc4ce598650af75ea5739e/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/" target="_blank" rel="noopener">▶ PLAY</a>
+<div class="card">
+<img class="thumb" src="https://raw.githubusercontent.com/brahim1994/gd-games/main/thumb2.png"/>
+<div class="title">Game 2</div>
+<a class="play-btn" href="https://html5.gamedistribution.com/bc99677144134e99bfc767ea4b03ec96/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/" target="_blank">▶ PLAY</a>
+</div>
 
-      <div class="controls">
-        <button class="ctrl" data-share>Share</button>
-        <button class="ctrl secondary" data-rate data-rate-url="https://www.amazon.com/gp/mas/dl/android?p=com.example.gdamazon">Rate</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Game 2 -->
-  <div class="game-container">
-    <div class="card">
-      <img class="thumb" src="https://raw.githubusercontent.com/brahim1994/gd-games/main/thumb2.png" alt="Game 2"/>
-      <div class="title">Game 2</div>
-      <div class="note">Sprunki link is not available here</div>
-
-      <a class="play-btn" href="https://html5.gamedistribution.com/bc99677144134e99bfc767ea4b03ec96/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/" target="_blank" rel="noopener">▶ PLAY</a>
-
-      <div class="controls">
-        <button class="ctrl" data-share>Share</button>
-        <button class="ctrl secondary" data-rate data-rate-url="https://www.amazon.com/gp/mas/dl/android?p=com.example.gdamazon">Rate</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Game 3 -->
-  <div class="game-container">
-    <div class="card">
-      <img class="thumb" src="https://raw.githubusercontent.com/brahim1994/gd-games/main/thumb3.png" alt="Game 3"/>
-      <div class="title">Game 3</div>
-      <div class="note">Fun & Relaxing</div>
-
-      <a class="play-btn" href="https://html5.gamedistribution.com/81bd3a3dac2a4fce968ee2d8dc648bbe/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/" target="_blank" rel="noopener">▶ PLAY</a>
-
-      <div class="controls">
-        <button class="ctrl" data-share>Share</button>
-        <button class="ctrl secondary" data-rate data-rate-url="https://www.amazon.com/gp/mas/dl/android?p=com.example.gdamazon">Rate</button>
-      </div>
-    </div>
-  </div>
-
-<script>
-/*
-  Behaviour:
-  - If Android injects window.CONFIG (via evaluateJavascript), we use it.
-  - Buttons with data-share will use navigator.share when available.
-  - Fallback: copy to clipboard and show small toast.
-  - Rate buttons open data-rate-url in new tab/window.
-*/
-
-function initControls(cfg){
-  const shareBtns = document.querySelectorAll('[data-share]');
-  const rateBtns  = document.querySelectorAll('[data-rate]');
-
-  const shareTextBase = (cfg && cfg.share_text) ? cfg.share_text : 'Check out this cool game!';
-  const rateUrlDefault = (cfg && cfg.rate_url) ? cfg.rate_url : '';
-
-  shareBtns.forEach(btn=>{
-    btn.addEventListener('click', async ()=>{
-      const pageUrl = location.href;
-      const text = shareTextBase + '\\n' + pageUrl;
-      if (navigator.share){
-        try {
-          await navigator.share({ title: document.title, text: shareTextBase, url: pageUrl });
-        } catch(e){
-          // user cancelled or failed
-          console.warn('navigator.share failed', e);
-          fallbackCopy(text);
-        }
-      } else {
-        // fallback copy to clipboard or open mail
-        fallbackCopy(text);
-      }
-    });
-  });
-
-  rateBtns.forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      const url = btn.getAttribute('data-rate-url') || rateUrlDefault;
-      if (!url) { alert('Rate URL not available'); return; }
-      // open in new tab/window; WebView should forward to external browser if needed
-      window.open(url, '_blank', 'noopener');
-    });
-  });
-}
-
-function fallbackCopy(text){
-  if (navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(text).then(()=>{
-      showToast('Link copied to clipboard');
-    }).catch(err=>{
-      console.warn('clipboard failed', err);
-      // fallback open mailto
-      window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(text), '_blank');
-    });
-  } else {
-    // very old browsers: open mail
-    window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(text), '_blank');
-  }
-}
-
-function showToast(msg){
-  // simple ephemeral toast
-  const t = document.createElement('div');
-  t.textContent = msg;
-  t.style.position = 'fixed';
-  t.style.bottom = '18px';
-  t.style.left = '50%';
-  t.style.transform = 'translateX(-50%)';
-  t.style.background = 'rgba(0,0,0,0.8)';
-  t.style.padding = '10px 16px';
-  t.style.borderRadius = '8px';
-  t.style.color = '#fff';
-  t.style.zIndex = 9999;
-  document.body.appendChild(t);
-  setTimeout(()=> t.remove(), 2600);
-}
-
-/* Hook for Android injection:
-   Android will run something like:
-   webView.evaluateJavascript("window.CONFIG = {...}; if(window.onConfigInjected) window.onConfigInjected();", null);
-*/
-function onConfigInjected(){
-  // window.CONFIG should exist now
-  initControls(window.CONFIG || {});
-}
-
-// if already injected before script runs
-if (window.CONFIG){
-  onConfigInjected();
-} else {
-  // expose hook so native can call window.onConfigInjected()
-  window.onConfigInjected = onConfigInjected;
-  // also init default controls with no config (so share/rate still work)
-  initControls({});
-}
-</script>
+<div class="card">
+<img class="thumb" src="https://raw.githubusercontent.com/brahim1994/gd-games/main/thumb3.png"/>
+<div class="title">Game 3</div>
+<a class="play-btn" href="https://html5.gamedistribution.com/81bd3a3dac2a4fce968ee2d8dc648bbe/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/" target="_blank">▶ PLAY</a>
+</div>
 </body>
 </html>
