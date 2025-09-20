@@ -1,13 +1,10 @@
 {
-  "MintegralAppID": "144002",
-  "MintegralAppKey": "7c22942b749fe6a6e361b675e96b3ee9",
-  "MintegralBannerUnitID": "2677210",
-  "MintegralBannerPlacementID": "1010694",
-  "MintegralInterstitialUnitID": "462374",
-  "MintegralInterstitialPlacementID": "290653",
-  "MintegralRewardUnitID": "462372",
-  "MintegralRewardPlacementID": "290651",
-  "MintegralNativeUnitID": "462377",
-  "MintegralNativePlacementID": "290656",
+  "mintegral_app_id": "144002",
+  "mintegral_app_key": "7c22942b749fe6a6e361b675e96b3ee9",
+
+  "banner_unit_id": "2677210",
+  "interstitial_unit_id": "462374",
+  "rewarded_unit_id": "462372",
+
   "home_url": "https://brahim1994.github.io/gd-games/"
 }
