@@ -1,9 +1,7 @@
 {
-  "mintegral_app_id": "144002",
-  "mintegral_app_key": "7c22942b749fe6a6e361b675e96b3ee9",
-  "banner_unit_id": "2677203",
-  "interstitial_unit_id": "1542103",
-  "rewarded_unit_id": "1542101",
+  "ironsource_app_key": "85460e61",
+  "ironsource_interstitial_unit_id": "DefaultInterstitial",
+  "ironsource_rewarded_unit_id": "DefaultRewardedVideo",
   "home_url": "https://brahim1994.github.io/gd-games/",
   "clicks_before_interstitial": 3,
   "show_ads": true
