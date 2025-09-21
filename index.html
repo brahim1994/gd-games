@@ -1,62 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>GD Games</title>
+  <meta charset="utf-8" />
+  <title>GD Games — Clean Launcher</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
-      text-align: center;
+    :root{
+      --bg:#0b0b0b; --card:#161616; --accent:#ff9800; --muted:rgba(255,255,255,0.65);
+      --white:#fff;
     }
-    h1 {
-      margin: 20px;
+    *{box-sizing:border-box}
+    body{
+      margin:0; padding:18px; font-family:Inter, Arial, sans-serif;
+      background:var(--bg); color:var(--white);
     }
-    .game-container {
-      margin: 20px auto;
-      width: 90%;
-      max-width: 800px;
+    h1{font-size:20px; margin:8px 0 18px; text-align:center}
+    .grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); max-width:1100px; margin:0 auto}
+    .card{
+      background:linear-gradient(180deg,#171717,#0f0f0f);
+      padding:14px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.6);
+      display:flex; flex-direction:column; align-items:center;
     }
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      background: #000;
-    }
+    .thumb{width:100%; height:160px; border-radius:8px; background:#000 center/cover no-repeat; margin-bottom:10px}
+    .title{font-weight:700; margin-bottom:6px}
+    .note{color:var(--muted); font-size:13px; margin-bottom:12px; text-align:center}
+    .controls{display:flex; gap:10px; width:100%; justify-content:center; flex-wrap:wrap}
+    .btn{background:var(--accent); border:none; color:#000; padding:10px 14px; border-radius:8px; font-weight:700; cursor:pointer}
+    .btn.ghost{background:transparent; color:var(--white); border:1px solid rgba(255,255,255,0.06)}
+    .iframe-wrap{width:100%; margin-top:12px; display:none}
+    .iframe-wrap iframe{width:100%; height:480px; border-radius:8px; border:0; background:#000}
+    .small{font-size:12px; color:var(--muted); text-align:center; margin-top:8px}
+    @media (max-width:520px){ .thumb{height:130px} .iframe-wrap iframe{height:360px} }
   </style>
 </head>
 <body>
-  <h1>🎮 Welcome to GD Games</h1>
 
-  <!-- Game 1 -->
-  <div class="game-container">
-    <h2>Game 1</h2>
-    <iframe 
-      src="https://html5.gamedistribution.com/5e09090e42fc4ce598650af75ea5739e/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/"
-      allow="autoplay; fullscreen">
-    </iframe>
+  <h1>🎮 GD Games — Clean Launcher</h1>
+  <p class="small">لمحافظة على تجربة نظيفة: اللعبة غتبان غير منين تضغط Play. إذا بغيت تقلّل الإعلانات بزاف، جرب تفتح اللعبة فـ نافذة جديدة أو شوف خيار “no-ads” فـ مزوّد اللعبة (إن وُجد).</p>
+
+  <div class="grid" id="grid">
+    <!-- card template (we'll place three cards manually) -->
+
+    <div class="card" data-src="https://html5.gamedistribution.com/5e09090e42fc4ce598650af75ea5739e/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/">
+      <div class="thumb" style="background-image:url('https://raw.githubusercontent.com/brahim1994/gd-games/main/thumb1.png')"></div>
+      <div class="title">Game 1</div>
+      <div class="note">Cozy puzzle — اضغط Play باش تبدأ</div>
+      <div class="controls">
+        <button class="btn play">▶ Play</button>
+        <button class="btn ghost open">Open (new tab)</button>
+      </div>
+      <div class="iframe-wrap"></div>
+    </div>
+
+    <div class="card" data-src="https://html5.gamedistribution.com/bc99677144134e99bfc767ea4b03ec96/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/">
+      <div class="thumb" style="background-image:url('https://raw.githubusercontent.com/brahim1994/gd-games/main/thumb2.png')"></div>
+      <div class="title">Game 2</div>
+      <div class="note">Fast arcade — Open in new tab to avoid some in-page ads</div>
+      <div class="controls">
+        <button class="btn play">▶ Play</button>
+        <button class="btn ghost open">Open (new tab)</button>
+      </div>
+      <div class="iframe-wrap"></div>
+    </div>
+
+    <div class="card" data-src="https://html5.gamedistribution.com/81bd3a3dac2a4fce968ee2d8dc648bbe/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/">
+      <div class="thumb" style="background-image:url('https://raw.githubusercontent.com/brahim1994/gd-games/main/thumb3.png')"></div>
+      <div class="title">Game 3</div>
+      <div class="note">Relaxing — اضغط Play أو افتح فتبويب جديد</div>
+      <div class="controls">
+        <button class="btn play">▶ Play</button>
+        <button class="btn ghost open">Open (new tab)</button>
+      </div>
+      <div class="iframe-wrap"></div>
+    </div>
+
   </div>
 
-  <!-- Game 2 -->
-  <div class="game-container">
-    <h2>Game 2</h2>
-    <iframe 
-      src="https://html5.gamedistribution.com/bc99677144134e99bfc767ea4b03ec96/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/"
-      allow="autoplay; fullscreen">
-    </iframe>
-  </div>
+<script>
+  // lazy load iframe on Play, or open in new tab
+  document.querySelectorAll('.card').forEach(card=>{
+    const url = card.dataset.src;
+    const btnPlay = card.querySelector('.play');
+    const btnOpen = card.querySelector('.open');
+    const iframeWrap = card.querySelector('.iframe-wrap');
 
-  <!-- Game 3 -->
-  <div class="game-container">
-    <h2>Game 3</h2>
-    <iframe 
-      src="https://html5.gamedistribution.com/81bd3a3dac2a4fce968ee2d8dc648bbe/?gd_sdk_referrer_url=https://brahim1994.github.io/gd-games/"
-      allow="autoplay; fullscreen">
-    </iframe>
-  </div>
+    btnPlay.addEventListener('click', ()=>{
+      // if iframe already exists toggle visibility
+      if (iframeWrap.dataset.loaded === '1') {
+        iframeWrap.style.display = iframeWrap.style.display === 'block' ? 'none' : 'block';
+        return;
+      }
+      // create iframe only on demand (reduces auto-load ads)
+      const ifr = document.createElement('iframe');
+      ifr.src = url;
+      ifr.allow = 'autoplay; fullscreen';
+      ifr.loading = 'lazy';
+      iframeWrap.appendChild(ifr);
+      iframeWrap.style.display = 'block';
+      iframeWrap.dataset.loaded = '1';
+      // scroll to the iframe smoothly (good UX)
+      setTimeout(()=> ifr.scrollIntoView({behavior:'smooth', block:'center'}), 200);
+    });
+
+    btnOpen.addEventListener('click', ()=>{
+      // open in new tab (user can choose to see game outside your page)
+      window.open(url, '_blank', 'noopener');
+    });
+  });
+
+  // optional: prevent accidental autoplay in some browsers
+  // (we created iframes lazily, so normally autoplay won't begin until user interacts)
+</script>
 
 </body>
 </html>
