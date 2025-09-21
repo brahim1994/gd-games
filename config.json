@@ -1,8 +1,9 @@
 {
-  "ironsource_app_key": "85460e61",
+  "ironsource_app_key": "23ab4d58d",
   "ironsource_interstitial_unit_id": "DefaultInterstitial",
   "ironsource_rewarded_unit_id": "DefaultRewardedVideo",
   "home_url": "https://brahim1994.github.io/gd-games/",
   "clicks_before_interstitial": 3,
   "show_ads": true
 }
+
